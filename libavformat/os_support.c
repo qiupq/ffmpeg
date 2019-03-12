@@ -47,7 +47,7 @@
 #if !HAVE_INET_ATON
 #include <stdlib.h>
 
-static int inet_aton(const char *str, struct in_addr *add)
+int inet_aton(const char *str, struct in_addr *add)
 {
     unsigned int add1 = 0, add2 = 0, add3 = 0, add4 = 0;
 
