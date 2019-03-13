@@ -12,8 +12,8 @@ else
  --cpu=cortex-a9 \
  --cross-prefix=arm-phytec-linux-gnueabi- \
  --pkg-config="pkg-config"\
- --sysroot=/mnt/ccc/gitPhytec/build/tmp/sysroots/phyboard-mira-imx6-7\
- --extra-cflags="-march=armv7-a -mfpu=neon  -mfloat-abi=hard -mcpu=cortex-a9 --sysroot=/mnt/ccc/gitPhytec/build/tmp/sysroots/phyboard-mira-imx6-7 -fvisibility=hidden -fdata-sections -ffunction-sections -Os -fPIC -DHAVE_LOCALTIME_R=1 -DHAVE_GMTIME_R=1 -DHAVE_SYS_UIO_H=1 -Dipv6mr_interface=ipv6mr_ifindex -Wno-psabi -fno-short-enums -fno-strict-aliasing -finline-limit=300"\
+ --sysroot=/mnt/ccc/gitPhytec/build/tmp/sysroots/phyboard-mira-imx6-7 \
+ --extra-cflags="-march=armv7-a -mfpu=neon  -mfloat-abi=hard -mcpu=cortex-a9 -fvisibility=hidden -fdata-sections -ffunction-sections -Os -fPIC -DHAVE_LOCALTIME_R=1 -DHAVE_GMTIME_R=1 -DHAVE_SYS_UIO_H=1 -Dipv6mr_interface=ipv6mr_ifindex -Wno-psabi -fno-short-enums -fno-strict-aliasing -finline-limit=300"\
  --enable-cross-compile \
  --enable-static \
  --enable-version3 \
@@ -72,3 +72,9 @@ exit 0
 --disable-muxers \
 --disable-demuxers \
 --enable-hwaccel=h264_videotoolbox \
+
+
+#comment
+#1.error:/libc.so.6: error adding symbols: DSO missing from command line
+#make: *** [ffprobe_g] Error 1 
+ set --pkg-config 
